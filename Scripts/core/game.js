@@ -10,6 +10,9 @@ var intro;
 var startScene;
 var insideMansion;
 var ground;
+var knife;
+var groundrun;
+var upstairs;
 function init() {
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");
@@ -78,6 +81,27 @@ function changeScene() {
             ground = new scenes.GroundScene();
             currentScene = ground;
             console.log("Starting Stay On Ground Scene");
+            break;
+        case config.Scene.KNIFE_SCENE:
+            //Show Start Scene
+            stage.removeAllChildren();
+            knife = new scenes.TakeKnifeScene();
+            currentScene = knife;
+            console.log("Starting  Knife Scene");
+            break;
+        case config.Scene.GROUND_RUN:
+            //Show Start Scene
+            stage.removeAllChildren();
+            groundrun = new scenes.GroundRunScene();
+            currentScene = groundrun;
+            console.log("Starting Ground Run Scene");
+            break;
+        case config.Scene.UPSTAIRS_SCENE:
+            //Show Start Scene
+            stage.removeAllChildren();
+            upstairs = new scenes.UpstairScene();
+            currentScene = upstairs;
+            console.log("Starting Upstairs Scene");
             break;
     }
     console.log(currentScene.numChildren);

@@ -35,12 +35,12 @@ var scenes;
         //Continue click event handler
         GroundScene.prototype._takeKnifeButtonClick = function (event) {
             //Switch to GO_IN scene
-            scene = config.Scene.STAY_GROUND;
+            scene = config.Scene.KNIFE_SCENE;
             changeScene();
         };
         GroundScene.prototype._groundRunButtonClick = function (event) {
             //Switch to GO_IN scene
-            scene = config.Scene.STAY_GROUND;
+            scene = config.Scene.GROUND_RUN;
             changeScene();
         };
         return GroundScene;

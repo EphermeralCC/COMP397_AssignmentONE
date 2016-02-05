@@ -34,7 +34,7 @@ var scenes;
         //GoUpstairsButton click event handler
         InsideMansion.prototype._upstairsButtonClick = function (event) {
             //Switch to GO_IN scene
-            scene = config.Scene.GO_IN;
+            scene = config.Scene.UPSTAIRS_SCENE;
             changeScene();
         };
         //GoDownstairsButton click event handler

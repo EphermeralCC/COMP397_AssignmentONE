@@ -48,7 +48,7 @@ module scenes {
         //GoUpstairsButton click event handler
         private _upstairsButtonClick(event: createjs.MouseEvent) {
             //Switch to GO_IN scene
-            scene = config.Scene.GO_IN;
+            scene = config.Scene.UPSTAIRS_SCENE;
             changeScene();
         }
         

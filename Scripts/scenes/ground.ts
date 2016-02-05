@@ -48,13 +48,13 @@ module scenes {
         //Continue click event handler
         private _takeKnifeButtonClick(event: createjs.MouseEvent) {
             //Switch to GO_IN scene
-            scene = config.Scene.STAY_GROUND;
+            scene = config.Scene.KNIFE_SCENE;
             changeScene();
         }
 
         private _groundRunButtonClick(event: createjs.MouseEvent) {
             //Switch to GO_IN scene
-            scene = config.Scene.STAY_GROUND;
+            scene = config.Scene.GROUND_RUN;
             changeScene();
         }
     }

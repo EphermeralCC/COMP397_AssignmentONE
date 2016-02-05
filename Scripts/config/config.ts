@@ -8,6 +8,9 @@
         public static GO_EXPLORE: number = 3;
         public static GO_UPSTAIRS: number = 4;
         public static STAY_GROUND: number = 5;
+        public static KNIFE_SCENE: number = 6;
+        public static GROUND_RUN:number = 7;
+        public static UPSTAIRS_SCENE:number = 8;
     }
     
     

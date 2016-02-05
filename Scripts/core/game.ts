@@ -13,6 +13,9 @@ var intro: scenes.Intro;
 var startScene: scenes.StartScene;
 var insideMansion: scenes.InsideMansion;
 var ground: scenes.GroundScene;
+var knife: scenes.TakeKnifeScene;
+var groundrun:scenes.GroundRunScene;
+var upstairs: scenes.UpstairScene;
 
 
 function init(): void {
@@ -99,6 +102,30 @@ function changeScene(): void {
             ground = new scenes.GroundScene();
             currentScene = ground;
             console.log("Starting Stay On Ground Scene");
+            break;
+            
+            case config.Scene.KNIFE_SCENE:
+            //Show Start Scene
+            stage.removeAllChildren();
+            knife = new scenes.TakeKnifeScene();
+            currentScene = knife;
+            console.log("Starting  Knife Scene");
+            break;
+            
+            case config.Scene.GROUND_RUN:
+            //Show Start Scene
+            stage.removeAllChildren();
+            groundrun = new scenes.GroundRunScene();
+            currentScene = groundrun;
+            console.log("Starting Ground Run Scene");
+            break;
+            
+            case config.Scene.UPSTAIRS_SCENE:
+            //Show Start Scene
+            stage.removeAllChildren();
+            upstairs = new scenes.UpstairScene();
+            currentScene = upstairs;
+            console.log("Starting Upstairs Scene");
             break;
             
     }
