@@ -5,7 +5,7 @@
         height: number;
         //CONSTRUCTOR
         constructor(pathString:string, x:number, y: number) {
-            super("../../Desktop/COMP397-Nightmare/Assets/images/" + pathString + ".png");
+            super("../../Assets/images/" + pathString + ".png");
             this.x = x;
             this.y = y; 
 

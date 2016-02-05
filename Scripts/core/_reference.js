@@ -5,5 +5,6 @@
 /// <reference path="../objects/scene.ts" />
 /// <reference path="../scenes/rightcave.ts" />
 /// <reference path="../scenes/leftcave.ts" />
+/// <reference path="../scenes/startscene.ts"/>
 /// <reference path="../scenes/intro.ts" /> 
 //# sourceMappingURL=_reference.js.map
