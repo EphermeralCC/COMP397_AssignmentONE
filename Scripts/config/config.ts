@@ -7,9 +7,7 @@
         public static GO_IN: number = 2;
         public static GO_EXPLORE: number = 3;
         public static GO_UPSTAIRS: number = 4;
-        public static GO_DOWNSTAIRS: number = 5;
-        public static BASEMENT: number = 7;
-        public static STAY_GROUND: number = 6;
+        public static STAY_GROUND: number = 5;
     }
     
     

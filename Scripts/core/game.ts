@@ -12,7 +12,7 @@ var scene: number;
 var intro: scenes.Intro;
 var startScene: scenes.StartScene;
 var insideMansion: scenes.InsideMansion;
-//var basement: scenes.
+var ground: scenes.GroundScene;
 
 
 function init(): void {
@@ -91,6 +91,14 @@ function changeScene(): void {
             insideMansion = new scenes.InsideMansion();
             currentScene = insideMansion;
             console.log("Starting Inside Mansion Scene");
+            break;
+            
+            case config.Scene.STAY_GROUND:
+            //Show Start Scene
+            stage.removeAllChildren();
+            ground = new scenes.GroundScene();
+            currentScene = ground;
+            console.log("Starting Stay On Ground Scene");
             break;
             
     }

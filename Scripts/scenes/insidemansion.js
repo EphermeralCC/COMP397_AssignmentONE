@@ -18,15 +18,11 @@ var scenes;
             this._insideMansionImage = new createjs.Bitmap("../../Assets/images/insidemansion.png");
             this.addChild(this._insideMansionImage);
             //add upstairs button to the MENU scene
-            this._upstairsButton = new objects.Button("GoUpstairsButton", config.Screen.CENTER_X - 150, config.Screen.CENTER_Y + 180);
+            this._upstairsButton = new objects.Button("GoUpstairsButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 180);
             this.addChild(this._upstairsButton);
-            //add downstairs button
             this._upstairsButton.on("click", this._upstairsButtonClick, this);
-            this._downstairsButton = new objects.Button("GoDownstairsButton", config.Screen.CENTER_X + 150, config.Screen.CENTER_Y + 180);
-            this.addChild(this._downstairsButton);
-            this._downstairsButton.on("click", this._downstairsButtonClick, this);
             //add ground button
-            this._groundButton = new objects.Button("StayGroundButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
+            this._groundButton = new objects.Button("StayGroundButton", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 180);
             this.addChild(this._groundButton);
             this._groundButton.on("click", this._groundButtonClick, this);
             stage.addChild(this);
@@ -41,16 +37,10 @@ var scenes;
             scene = config.Scene.GO_IN;
             changeScene();
         };
-        //StayGroundButton click event handler
-        InsideMansion.prototype._downstairsButtonClick = function (event) {
-            //Switch to Explore scene
-            scene = config.Scene.GO_IN;
-            changeScene();
-        };
         //GoDownstairsButton click event handler
         InsideMansion.prototype._groundButtonClick = function (event) {
             //Switch to Explore scene
-            scene = config.Scene.GO_IN;
+            scene = config.Scene.STAY_GROUND;
             changeScene();
         };
         return InsideMansion;

@@ -9,8 +9,7 @@ var scene;
 var intro;
 var startScene;
 var insideMansion;
-// var leftCave: scenes.LeftCave;
-// var rightCave: scenes.RightCave;
+var ground;
 function init() {
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");
@@ -72,6 +71,13 @@ function changeScene() {
             insideMansion = new scenes.InsideMansion();
             currentScene = insideMansion;
             console.log("Starting Inside Mansion Scene");
+            break;
+        case config.Scene.STAY_GROUND:
+            //Show Start Scene
+            stage.removeAllChildren();
+            ground = new scenes.GroundScene();
+            currentScene = ground;
+            console.log("Starting Stay On Ground Scene");
             break;
     }
     console.log(currentScene.numChildren);

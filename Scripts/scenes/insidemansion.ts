@@ -3,7 +3,6 @@ module scenes {
         //PRIVATE INSTANCE VARIABLES --------------------------------
         private _insideMansionImage: createjs.Bitmap;
         private _upstairsButton: objects.Button;
-        private _downstairsButton: objects.Button;
         private _groundButton: objects.Button;
     
         //CONSTRUCTOR --------------------------------------
@@ -21,23 +20,16 @@ module scenes {
         
             //add upstairs button to the MENU scene
             this._upstairsButton = new objects.Button("GoUpstairsButton",
-                config.Screen.CENTER_X - 150,
+                config.Screen.CENTER_X - 100,
                 config.Screen.CENTER_Y + 180);
             this.addChild(this._upstairsButton);
             
-            //add downstairs button
             this._upstairsButton.on("click", this._upstairsButtonClick, this);
             
-            this._downstairsButton = new objects.Button("GoDownstairsButton",
-                config.Screen.CENTER_X + 150,
-                config.Screen.CENTER_Y + 180);
-            this.addChild(this._downstairsButton);
-
-            this._downstairsButton.on("click", this._downstairsButtonClick, this);
             
             //add ground button
             this._groundButton = new objects.Button("StayGroundButton",
-                config.Screen.CENTER_X,
+                config.Screen.CENTER_X + 100,
                 config.Screen.CENTER_Y + 180);
             this.addChild(this._groundButton);
 
@@ -60,17 +52,10 @@ module scenes {
             changeScene();
         }
         
-        //StayGroundButton click event handler
-        private _downstairsButtonClick(event: createjs.MouseEvent){
-            //Switch to Explore scene
-            scene = config.Scene.GO_IN;
-            changeScene();
-        }
-        
         //GoDownstairsButton click event handler
         private _groundButtonClick(event: createjs.MouseEvent){
             //Switch to Explore scene
-            scene = config.Scene.GO_IN;
+            scene = config.Scene.STAY_GROUND;
             changeScene();
         }
     }
