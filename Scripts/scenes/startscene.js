@@ -25,7 +25,7 @@ var scenes;
             //add Explore Outside button to Menu scene
             this._outsideHouseButton = new objects.Button("ExploreOutsideButton", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 180);
             this.addChild(this._outsideHouseButton);
-            this._insideHouseButton.on("click", this._outsideHouseButtonClick, this);
+            this._outsideHouseButton.on("click", this._outsideHouseButtonClick, this);
             stage.addChild(this);
         };
         //Start Scene updates here
@@ -41,7 +41,7 @@ var scenes;
         //ExploreOutsideButton click event handler
         StartScene.prototype._outsideHouseButtonClick = function (event) {
             //Switch to Explore scene
-            scene = config.Scene.GO_IN;
+            scene = config.Scene.OUTSIDE;
             changeScene();
         };
         return StartScene;

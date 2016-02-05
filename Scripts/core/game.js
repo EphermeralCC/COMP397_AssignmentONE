@@ -3,6 +3,7 @@
 var canvas;
 var stage;
 var stats;
+//var assets: createjs.LoadQueue();
 var currentScene;
 var scene;
 // Game Scenes
@@ -14,6 +15,24 @@ var knife;
 var groundrun;
 var upstairs;
 var bedroom;
+var washroom;
+var outside;
+var followroad;
+var zombiecar;
+var ignorecar;
+var forest;
+var cave;
+var light;
+/*
+var assetData =[
+    {id: "StartOverButton", src:"../../Assets/images/StartOverButton.png"},
+    
+    
+]
+
+function preLoad(){}
+
+*/
 function init() {
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");
@@ -110,6 +129,62 @@ function changeScene() {
             bedroom = new scenes.UpstairsRightScene();
             currentScene = bedroom;
             console.log("Starting Bedroom Scene");
+            break;
+        case config.Scene.UPSTAIRS_LEFT:
+            //Show Start Scene
+            stage.removeAllChildren();
+            washroom = new scenes.UpstairsLeftScene();
+            currentScene = washroom;
+            console.log("Starting Washroom Scene");
+            break;
+        case config.Scene.OUTSIDE:
+            //Show Start Scene
+            stage.removeAllChildren();
+            outside = new scenes.OutsideMansion();
+            currentScene = outside;
+            console.log("Starting Outside Scene");
+            break;
+        case config.Scene.FOLLOW_ROAD:
+            //Show Start Scene
+            stage.removeAllChildren();
+            followroad = new scenes.FollowRoadScene();
+            currentScene = followroad;
+            console.log("Starting FollowRoadScene Scene");
+            break;
+        case config.Scene.CAR_ZOMBIE:
+            //Show Start Scene
+            stage.removeAllChildren();
+            zombiecar = new scenes.ZombieCarScene();
+            currentScene = zombiecar;
+            console.log("Starting zombiecar Scene");
+            break;
+        case config.Scene.IGNORE_CAR:
+            //Show Start Scene
+            stage.removeAllChildren();
+            ignorecar = new scenes.IgnoreCarScene();
+            currentScene = ignorecar;
+            console.log("Starting IgnoreCarScene Scene");
+            break;
+        case config.Scene.FOREST:
+            //Show Start Scene
+            stage.removeAllChildren();
+            forest = new scenes.ForestOutside();
+            currentScene = forest;
+            console.log("Starting ForestOutside Scene");
+            break;
+        case config.Scene.CAVE:
+            //Show Start Scene
+            stage.removeAllChildren();
+            cave = new scenes.CaveCollapseScene();
+            currentScene = cave;
+            console.log("Starting CaveCollapseScene Scene");
+            break;
+        case config.Scene.LIGHT:
+            //Show Start Scene
+            stage.removeAllChildren();
+            light = new scenes.ForestLightScene();
+            currentScene = light;
+            console.log("Starting ForestLightScene Scene");
             break;
     }
     console.log(currentScene.numChildren);

@@ -1,9 +1,9 @@
 module scenes {
-    export class InsideMansion extends objects.Scene {
+    export class FollowRoadScene extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES --------------------------------
-        private _insideMansionImage: createjs.Bitmap;
-        private _upstairsButton: objects.Button;
-        private _groundButton: objects.Button;
+        private _followRoadImage: createjs.Bitmap;
+        private _getInCarButton: objects.Button;
+        private _ignoreTheCarButton: objects.Button;
     
         //CONSTRUCTOR --------------------------------------
         constructor() {
@@ -15,25 +15,25 @@ module scenes {
         //Start Method
         public start(): void {
             //Add Image
-            this._insideMansionImage = new createjs.Bitmap("../../Assets/images/insidemansion.png");
-            this.addChild(this._insideMansionImage);
+            this._followRoadImage = new createjs.Bitmap("../../Assets/images/outsideroad.png");
+            this.addChild(this._followRoadImage);
         
             //add upstairs button to the MENU scene
-            this._upstairsButton = new objects.Button("GoUpstairsButton",
+            this._getInCarButton = new objects.Button("GetInCarButton",
                 config.Screen.CENTER_X - 100,
                 config.Screen.CENTER_Y + 180);
-            this.addChild(this._upstairsButton);
+            this.addChild(this._getInCarButton);
             
-            this._upstairsButton.on("click", this._upstairsButtonClick, this);
+            this._getInCarButton.on("click", this._getInCarButtonClick, this);
 
             
             //add ground button
-            this._groundButton = new objects.Button("StayGroundButton",
+            this._ignoreTheCarButton = new objects.Button("IgnoreTheCarButton",
                 config.Screen.CENTER_X + 100,
                 config.Screen.CENTER_Y + 180);
-            this.addChild(this._groundButton);
+            this.addChild(this._ignoreTheCarButton);
 
-            this._groundButton.on("click", this._groundButtonClick, this);
+            this._ignoreTheCarButton.on("click", this._ignoreTheCarButtonClick, this);
             
             stage.addChild(this);
         }
@@ -46,16 +46,16 @@ module scenes {
         //EVENT HANDLERS -------------------------------
         
         //GoUpstairsButton click event handler
-        private _upstairsButtonClick(event: createjs.MouseEvent) {
+        private _getInCarButtonClick(event: createjs.MouseEvent) {
             //Switch to GO_IN scene
-            scene = config.Scene.UPSTAIRS_SCENE;
+            scene = config.Scene.CAR_ZOMBIE;
             changeScene();
         }
         
         //GoDownstairsButton click event handler
-        private _groundButtonClick(event: createjs.MouseEvent){
+        private _ignoreTheCarButtonClick(event: createjs.MouseEvent){
             //Switch to Explore scene
-            scene = config.Scene.STAY_GROUND;
+            scene = config.Scene.IGNORE_CAR;
             changeScene();
         }
     }

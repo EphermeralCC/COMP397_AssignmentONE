@@ -12,6 +12,14 @@
         public static GROUND_RUN:number = 7;
         public static UPSTAIRS_SCENE:number = 8;
         public static UPSTAIRS_RIGHT:number = 9;
+        public static UPSTAIRS_LEFT: number = 10;
+        public static OUTSIDE: number = 11;
+        public static FOLLOW_ROAD: number = 12;
+        public static CAR_ZOMBIE: number = 13;
+        public static IGNORE_CAR: number = 14;
+        public static FOREST: number = 15;
+        public static CAVE: number = 16;
+        public static LIGHT: number = 17;
     }
     
     

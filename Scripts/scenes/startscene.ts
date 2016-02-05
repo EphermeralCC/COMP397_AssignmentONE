@@ -33,7 +33,7 @@ module scenes {
             config.Screen.CENTER_Y + 180);
             this.addChild(this._outsideHouseButton);
             
-            this._insideHouseButton.on("click", this._outsideHouseButtonClick, this);
+            this._outsideHouseButton.on("click", this._outsideHouseButtonClick, this);
             
             stage.addChild(this);
         }
@@ -55,7 +55,7 @@ module scenes {
         //ExploreOutsideButton click event handler
         private _outsideHouseButtonClick(event: createjs.MouseEvent){
             //Switch to Explore scene
-            scene = config.Scene.GO_IN;
+            scene = config.Scene.OUTSIDE;
             changeScene();
         }
     }

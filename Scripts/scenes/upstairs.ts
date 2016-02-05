@@ -48,7 +48,7 @@ module scenes {
         //Continue click event handler
         private _leftButtonButtonClick(event: createjs.MouseEvent) {
             //Switch to GO_IN scene
-            scene = config.Scene.KNIFE_SCENE;
+            scene = config.Scene.UPSTAIRS_LEFT;
             changeScene();
         }
 

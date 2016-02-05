@@ -35,7 +35,7 @@ var scenes;
         //Continue click event handler
         UpstairScene.prototype._leftButtonButtonClick = function (event) {
             //Switch to GO_IN scene
-            scene = config.Scene.KNIFE_SCENE;
+            scene = config.Scene.UPSTAIRS_LEFT;
             changeScene();
         };
         UpstairScene.prototype._rightButtonButtonClick = function (event) {
