@@ -22,15 +22,25 @@ var scenes;
             this._insideHouseButton = new objects.Button("GoInButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 180);
             this.addChild(this._insideHouseButton);
             this._insideHouseButton.on("click", this._insideHouseButtonClick, this);
+            //add Explore Outside button to Menu scene
+            this._outsideHouseButton = new objects.Button("ExploreOutsideButton", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 180);
+            this.addChild(this._outsideHouseButton);
+            this._insideHouseButton.on("click", this._outsideHouseButtonClick, this);
             stage.addChild(this);
         };
         //Start Scene updates here
         StartScene.prototype.update = function () {
         };
         //EVENT HANDLERS -------------------------------
-        //GO_IN Button click event handler
+        //GoInButton click event handler
         StartScene.prototype._insideHouseButtonClick = function (event) {
             //Switch to GO_IN scene
+            scene = config.Scene.GO_IN;
+            changeScene();
+        };
+        //ExploreOutsideButton click event handler
+        StartScene.prototype._outsideHouseButtonClick = function (event) {
+            //Switch to Explore scene
             scene = config.Scene.GO_IN;
             changeScene();
         };

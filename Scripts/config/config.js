@@ -5,10 +5,12 @@ var config;
         function Scene() {
         }
         Scene.INTRO = 0;
-        // public static LEFT_CAVE: number = 4;
-        // public static RIGHT_CAVE: number = 3;
         Scene.START_SCENE = 1;
         Scene.GO_IN = 2;
+        Scene.GO_EXPLORE = 3;
+        Scene.GO_UPSTAIRS = 4;
+        Scene.GO_DOWNSTAIRS = 5;
+        Scene.STAY_GROUND = 6;
         return Scene;
     })();
     config.Scene = Scene;

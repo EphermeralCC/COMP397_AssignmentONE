@@ -11,8 +11,9 @@ var scene: number;
 // Game Scenes
 var intro: scenes.Intro;
 var startScene: scenes.StartScene;
-// var leftCave: scenes.LeftCave;
-// var rightCave: scenes.RightCave;
+var insideMansion: scenes.InsideMansion;
+//var basement: scenes.
+
 
 function init(): void {
     // create a reference the HTML canvas Element
@@ -83,21 +84,15 @@ function changeScene(): void {
             currentScene = startScene;
             console.log("Starting startScene Scene");
             break;
-                        
-        // case config.Scene.LEFT_CAVE:
-        //     // show the PLAY scene
-        //     stage.removeAllChildren();
-        //     leftCave = new scenes.LeftCave();
-        //     currentScene = leftCave;
-        //     console.log("Starting LEFT_CAVE Scene");
-        //     break;
-        // case config.Scene.RIGHT_CAVE:
-        //     // show the game OVER scene
-        //     stage.removeAllChildren();
-        //     rightCave = new scenes.RightCave();
-        //     currentScene = rightCave;
-        //     console.log("Starting RIGHT_CAVE Scene");
-        //     break;
+            
+            case config.Scene.GO_IN:
+            //Show Start Scene
+            stage.removeAllChildren();
+            insideMansion = new scenes.InsideMansion();
+            currentScene = insideMansion;
+            console.log("Starting Inside Mansion Scene");
+            break;
+            
     }
 
     console.log(currentScene.numChildren);

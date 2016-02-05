@@ -26,7 +26,15 @@ module scenes {
             this.addChild(this._insideHouseButton);
 
             this._insideHouseButton.on("click", this._insideHouseButtonClick, this);
-
+            
+            //add Explore Outside button to Menu scene
+            this._outsideHouseButton = new objects.Button("ExploreOutsideButton",
+            config.Screen.CENTER_X + 100,
+            config.Screen.CENTER_Y + 180);
+            this.addChild(this._outsideHouseButton);
+            
+            this._insideHouseButton.on("click", this._outsideHouseButtonClick, this);
+            
             stage.addChild(this);
         }
     
@@ -37,9 +45,16 @@ module scenes {
         
         //EVENT HANDLERS -------------------------------
         
-        //GO_IN Button click event handler
+        //GoInButton click event handler
         private _insideHouseButtonClick(event: createjs.MouseEvent) {
             //Switch to GO_IN scene
+            scene = config.Scene.GO_IN;
+            changeScene();
+        }
+        
+        //ExploreOutsideButton click event handler
+        private _outsideHouseButtonClick(event: createjs.MouseEvent){
+            //Switch to Explore scene
             scene = config.Scene.GO_IN;
             changeScene();
         }
