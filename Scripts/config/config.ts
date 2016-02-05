@@ -11,6 +11,7 @@
         public static KNIFE_SCENE: number = 6;
         public static GROUND_RUN:number = 7;
         public static UPSTAIRS_SCENE:number = 8;
+        public static UPSTAIRS_RIGHT:number = 9;
     }
     
     

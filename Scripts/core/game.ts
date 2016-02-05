@@ -16,6 +16,7 @@ var ground: scenes.GroundScene;
 var knife: scenes.TakeKnifeScene;
 var groundrun:scenes.GroundRunScene;
 var upstairs: scenes.UpstairScene;
+var bedroom: scenes.UpstairsRightScene;
 
 
 function init(): void {
@@ -126,6 +127,14 @@ function changeScene(): void {
             upstairs = new scenes.UpstairScene();
             currentScene = upstairs;
             console.log("Starting Upstairs Scene");
+            break;
+            
+            case config.Scene.UPSTAIRS_RIGHT:
+            //Show Start Scene
+            stage.removeAllChildren();
+            bedroom = new scenes.UpstairsRightScene();
+            currentScene = bedroom;
+            console.log("Starting Bedroom Scene");
             break;
             
     }

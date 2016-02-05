@@ -54,7 +54,7 @@ module scenes {
 
         private _rightButtonButtonClick(event: createjs.MouseEvent) {
             //Switch to GO_IN scene
-            scene = config.Scene.GROUND_RUN;
+            scene = config.Scene.UPSTAIRS_RIGHT;
             changeScene();
         }
     }

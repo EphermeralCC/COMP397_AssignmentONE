@@ -13,3 +13,4 @@
 /// <reference path="../scenes/takeknife.ts" />
 /// <reference path="../scenes/groundrun.ts" />
 /// <reference path="../scenes/upstairs.ts" />
+/// <reference path="../scenes/upstairsright.ts" />

@@ -40,7 +40,7 @@ var scenes;
         };
         UpstairScene.prototype._rightButtonButtonClick = function (event) {
             //Switch to GO_IN scene
-            scene = config.Scene.GROUND_RUN;
+            scene = config.Scene.UPSTAIRS_RIGHT;
             changeScene();
         };
         return UpstairScene;

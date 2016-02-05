@@ -13,6 +13,7 @@ var ground;
 var knife;
 var groundrun;
 var upstairs;
+var bedroom;
 function init() {
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");
@@ -102,6 +103,13 @@ function changeScene() {
             upstairs = new scenes.UpstairScene();
             currentScene = upstairs;
             console.log("Starting Upstairs Scene");
+            break;
+        case config.Scene.UPSTAIRS_RIGHT:
+            //Show Start Scene
+            stage.removeAllChildren();
+            bedroom = new scenes.UpstairsRightScene();
+            currentScene = bedroom;
+            console.log("Starting Bedroom Scene");
             break;
     }
     console.log(currentScene.numChildren);

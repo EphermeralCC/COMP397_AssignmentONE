@@ -13,6 +13,7 @@ var config;
         Scene.KNIFE_SCENE = 6;
         Scene.GROUND_RUN = 7;
         Scene.UPSTAIRS_SCENE = 8;
+        Scene.UPSTAIRS_RIGHT = 9;
         return Scene;
     })();
     config.Scene = Scene;
