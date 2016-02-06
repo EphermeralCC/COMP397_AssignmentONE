@@ -1,3 +1,9 @@
+//The Source file name: game.ts 
+//Author’s name: Christine Cho
+//Last Modified by: Christine Cho
+//Date last Modified: 02/05/2016
+//Program description: Controls everything that happens in the game 
+//Revision History: Complete
 /// <reference path = "_reference.ts" />
 // global variables
 var canvas;

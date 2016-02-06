@@ -1,3 +1,9 @@
+//The Source file name: intro.ts 
+//Author’s name: Christine Cho
+//Last Modified by: Christine Cho
+//Date last Modified: 02/05/2016
+//Program description: The scene for the INTRO 
+//Revision History: Complete
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -31,7 +37,7 @@ var scenes;
         //EVENT HANDLERS ++++++++++++++++++++
         //StartButton click event handler
         Intro.prototype._startButtonClick = function (event) {
-            //Switch to StartScene
+            //Switch to START_SCENE
             scene = config.Scene.START_SCENE;
             changeScene();
         };

@@ -1,3 +1,9 @@
+//The Source file name: groundrun.ts 
+//Author’s name: Christine Cho
+//Last Modified by: Christine Cho
+//Date last Modified: 02/05/2016
+//Program description: The scene for the GroundRunScene 
+//Revision History: Complete
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -17,7 +23,7 @@ var scenes;
             //Add Image
             this._groundRunSceneImage = new createjs.Bitmap("../../Assets/images/GroundRunScene.png");
             this.addChild(this._groundRunSceneImage);
-            //add upstairs button to the MENU scene
+            //add StartOverButton button to the MENU scene
             this._startOverButton = new objects.Button("StartOverButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);
             this.addChild(this._startOverButton);
             // START_OVER Button event listener
@@ -30,7 +36,7 @@ var scenes;
         //EVENT HANDLERS -------------------------------
         //StartOverButton click event handler
         GroundRunScene.prototype._startOverButtonClick = function (event) {
-            //Switch to GO_IN scene
+            //Switch to INTRO scene
             scene = config.Scene.INTRO;
             changeScene();
         };

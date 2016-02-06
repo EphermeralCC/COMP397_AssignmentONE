@@ -1,3 +1,9 @@
+//The Source file name: upstairs.ts 
+//Author’s name: Christine Cho
+//Last Modified by: Christine Cho
+//Date last Modified: 02/05/2016
+//Program description: The scene for the UpstairScene 
+//Revision History: Complete
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -18,11 +24,11 @@ var scenes;
             //Add Image
             this._upstairsSceneImage = new createjs.Bitmap("../../Assets/images/UpstairsScene.png");
             this.addChild(this._upstairsSceneImage);
-            //add TakeKnife button to the MENU scene
+            //add UpstairsLeftButton button to the MENU scene
             this._leftButton = new objects.Button("UpstairsLeftButton", config.Screen.CENTER_X - 200, config.Screen.CENTER_Y);
             this.addChild(this._leftButton);
             this._leftButton.on("click", this._leftButtonButtonClick, this);
-            //add GroundRun button to the MENU scene
+            //add UpstairsRightButton button to the MENU scene
             this._rightButton = new objects.Button("UpstairsRightButton", config.Screen.CENTER_X + 180, config.Screen.CENTER_Y);
             this.addChild(this._rightButton);
             this._rightButton.on("click", this._rightButtonButtonClick, this);
@@ -32,14 +38,15 @@ var scenes;
         UpstairScene.prototype.update = function () {
         };
         //EVENT HANDLERS -------------------------------
-        //Continue click event handler
+        //UpstairsLeftButton click event handler
         UpstairScene.prototype._leftButtonButtonClick = function (event) {
-            //Switch to GO_IN scene
+            //Switch to UPSTAIRS_LEFT scene
             scene = config.Scene.UPSTAIRS_LEFT;
             changeScene();
         };
+        //UpstairsRightButton click event handler
         UpstairScene.prototype._rightButtonButtonClick = function (event) {
-            //Switch to GO_IN scene
+            //Switch to UPSTAIRS_RIGHT scene
             scene = config.Scene.UPSTAIRS_RIGHT;
             changeScene();
         };

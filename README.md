@@ -1,3 +1,3 @@
-# COMP397-W2016-TheNewDragon
+# COMP397-W2016-Nightmare
 
-COMP397 The New Dragon Template for Web Game Programming @ Centennial
+COMP397 Assignment 1 - The Nightmare Story Choice Game @ Centennial

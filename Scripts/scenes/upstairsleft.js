@@ -1,3 +1,9 @@
+//The Source file name: upstairsleft.ts 
+//Author’s name: Christine Cho
+//Last Modified by: Christine Cho
+//Date last Modified: 02/05/2016
+//Program description: The scene for the UpstairsLeftScene 
+//Revision History: Complete
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -18,10 +24,10 @@ var scenes;
             //Add Image
             this._washroomSceneImage = new createjs.Bitmap("../../Assets/images/UpstairsLeftDeadScene.png");
             this.addChild(this._washroomSceneImage);
-            //add startoverbutton
+            //add StartOverButton
             this._startOverScene = new objects.Button("StartOverButton", config.Screen.CENTER_X + 190, config.Screen.CENTER_Y + 180);
             this.addChild(this._startOverScene);
-            // START_OVER Button event listener
+            // StartOverButton Button event listener
             this._startOverScene.on("click", this._startOverSceneButtonClick, this);
             stage.addChild(this);
         };
@@ -29,9 +35,9 @@ var scenes;
         UpstairsLeftScene.prototype.update = function () {
         };
         //EVENT HANDLERS -------------------------------
-        //Continue click event handler
+        //StartOverButton click event handler
         UpstairsLeftScene.prototype._startOverSceneButtonClick = function (event) {
-            //Switch to GO_IN scene
+            //Switch to INTRO scene
             scene = config.Scene.INTRO;
             changeScene();
         };

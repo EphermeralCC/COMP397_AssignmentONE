@@ -1,3 +1,9 @@
+//The Source file name: followroad.ts 
+//Author’s name: Christine Cho
+//Last Modified by: Christine Cho
+//Date last Modified: 02/05/2016
+//Program description: The scene for the FollowRoadScene 
+//Revision History: Complete
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -17,11 +23,11 @@ var scenes;
             //Add Image
             this._followRoadImage = new createjs.Bitmap("../../Assets/images/outsideroad.png");
             this.addChild(this._followRoadImage);
-            //add upstairs button to the MENU scene
+            //add GetInCarButton button to the MENU scene
             this._getInCarButton = new objects.Button("GetInCarButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 180);
             this.addChild(this._getInCarButton);
             this._getInCarButton.on("click", this._getInCarButtonClick, this);
-            //add ground button
+            //add IgnoreTheCarButton button
             this._ignoreTheCarButton = new objects.Button("IgnoreTheCarButton", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 180);
             this.addChild(this._ignoreTheCarButton);
             this._ignoreTheCarButton.on("click", this._ignoreTheCarButtonClick, this);
@@ -31,13 +37,13 @@ var scenes;
         FollowRoadScene.prototype.update = function () {
         };
         //EVENT HANDLERS -------------------------------
-        //GoUpstairsButton click event handler
+        //GetInCarButton click event handler
         FollowRoadScene.prototype._getInCarButtonClick = function (event) {
             //Switch to GO_IN scene
             scene = config.Scene.CAR_ZOMBIE;
             changeScene();
         };
-        //GoDownstairsButton click event handler
+        //IgnoreTheCarButton click event handler
         FollowRoadScene.prototype._ignoreTheCarButtonClick = function (event) {
             //Switch to Explore scene
             scene = config.Scene.IGNORE_CAR;
