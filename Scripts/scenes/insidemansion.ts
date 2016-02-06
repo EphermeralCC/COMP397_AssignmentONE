@@ -22,7 +22,7 @@ module scenes {
         //Start Method
         public start(): void {
             //Add Image
-            this._insideMansionImage = new createjs.Bitmap(assets.getResult("insidemansion"));
+            this._insideMansionImage = new createjs.Bitmap(assets.getResult("InsideMansion"));
             this.addChild(this._insideMansionImage);
         
             //add GoDownstairsButton button to the MENU scene

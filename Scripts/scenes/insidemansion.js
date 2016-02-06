@@ -21,7 +21,7 @@ var scenes;
         //Start Method
         InsideMansion.prototype.start = function () {
             //Add Image
-            this._insideMansionImage = new createjs.Bitmap(assets.getResult("insidemansion"));
+            this._insideMansionImage = new createjs.Bitmap(assets.getResult("InsideMansion"));
             this.addChild(this._insideMansionImage);
             //add GoDownstairsButton button to the MENU scene
             this._upstairsButton = new objects.Button("GoUpstairsButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 180);
