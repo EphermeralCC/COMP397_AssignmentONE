@@ -21,7 +21,7 @@ var scenes;
         //Start Method
         GroundRunScene.prototype.start = function () {
             //Add Image
-            this._groundRunSceneImage = new createjs.Bitmap("../../Assets/images/GroundRunScene.png");
+            this._groundRunSceneImage = new createjs.Bitmap(assets.getResult("GroundRunScene"));
             this.addChild(this._groundRunSceneImage);
             //add StartOverButton button to the MENU scene
             this._startOverButton = new objects.Button("StartOverButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);

@@ -21,7 +21,7 @@ var scenes;
         //Start Method
         ZombieCarScene.prototype.start = function () {
             //Add Image
-            this._zombieCarSceneImage = new createjs.Bitmap("../../Assets/images/zombiecar.png");
+            this._zombieCarSceneImage = new createjs.Bitmap(assets.getResult("zombiecar"));
             this.addChild(this._zombieCarSceneImage);
             //add StartOverButton button to the MENU scene
             this._startOverButton = new objects.Button("StartOverButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);

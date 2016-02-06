@@ -21,7 +21,7 @@ module scenes {
         //Start Method
         public start(): void {
             //Add Image
-            this._forestLightSceneImage = new createjs.Bitmap("../../Assets/images/forestlight.png");
+            this._forestLightSceneImage = new createjs.Bitmap(assets.getResult("forestlight"));
             this.addChild(this._forestLightSceneImage);
         
             //add StartOverButton button to the MENU scene

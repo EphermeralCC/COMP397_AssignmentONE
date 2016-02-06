@@ -22,7 +22,7 @@ var scenes;
         //Start Method
         UpstairsRightScene.prototype.start = function () {
             //Add Image
-            this._bedroomSceneImage = new createjs.Bitmap("../../Assets/images/BedroomScene.png");
+            this._bedroomSceneImage = new createjs.Bitmap(assets.getResult("BedroomScene"));
             this.addChild(this._bedroomSceneImage);
             //add RestartButton
             this._restartButton = new objects.Button("RestartButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);

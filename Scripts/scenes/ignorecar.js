@@ -21,7 +21,7 @@ var scenes;
         //Start Method
         IgnoreCarScene.prototype.start = function () {
             //Add Image
-            this._ignoreCarImage = new createjs.Bitmap("../../Assets/images/ignorecar.png");
+            this._ignoreCarImage = new createjs.Bitmap(assets.getResult("ignorecar"));
             this.addChild(this._ignoreCarImage);
             //add StartOverButton button to the MENU scene
             this._startOverButton = new objects.Button("StartOverButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);

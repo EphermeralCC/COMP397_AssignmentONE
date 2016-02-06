@@ -21,7 +21,7 @@ var scenes;
         //Start Method
         ForestOutside.prototype.start = function () {
             //Add Image
-            this._forestOutsideImage = new createjs.Bitmap("../../Assets/images/forestcavescene.png");
+            this._forestOutsideImage = new createjs.Bitmap(assets.getResult("forestcavescene"));
             this.addChild(this._forestOutsideImage);
             //add GoInCaveButton to the MENU scene
             this._goInCaveButton = new objects.Button("GoInCaveButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 180);

@@ -22,7 +22,7 @@ var scenes;
         // Start Method
         Intro.prototype.start = function () {
             // add Intro Image
-            this._introImage = new createjs.Bitmap("../../Assets/images/Intro.png");
+            this._introImage = new createjs.Bitmap(assets.getResult("Intro"));
             this.addChild(this._introImage);
             //add startButton to the Menu scene
             this._startButton = new objects.Button("startButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 80);

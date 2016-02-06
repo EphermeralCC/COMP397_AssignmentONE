@@ -22,7 +22,7 @@ module scenes {
         //Start Method
         public start(): void {
             //Add Image
-            this._washroomSceneImage = new createjs.Bitmap("../../Assets/images/UpstairsLeftDeadScene.png");
+            this._washroomSceneImage = new createjs.Bitmap(assets.getResult("UpstairsLeftDeadScene"));
             this.addChild(this._washroomSceneImage);
         
         //add StartOverButton

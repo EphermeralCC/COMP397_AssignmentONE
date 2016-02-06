@@ -22,7 +22,7 @@ var scenes;
         //Start Method
         StartScene.prototype.start = function () {
             //Add Image
-            this._startSceneImage = new createjs.Bitmap("../../Assets/images/startScene.png");
+            this._startSceneImage = new createjs.Bitmap(assets.getResult("startscene"));
             this.addChild(this._startSceneImage);
             //add GO_IN button to the MENU scene
             this._insideHouseButton = new objects.Button("GoInButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 180);

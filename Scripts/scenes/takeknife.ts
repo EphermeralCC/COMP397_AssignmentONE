@@ -21,7 +21,7 @@ module scenes {
         //Start Method
         public start(): void {
             //Add Image
-            this._knifeSceneImage = new createjs.Bitmap("../../Assets/images/KnifeScene.png");
+            this._knifeSceneImage = new createjs.Bitmap(assets.getResult("KnifeScene"));
             this.addChild(this._knifeSceneImage);
         
             //add StartOverButton button to the MENU scene

@@ -23,7 +23,7 @@ module scenes {
         //Start Method
         public start(): void {
             //Add Image
-            this._startSceneImage = new createjs.Bitmap("../../Assets/images/startScene.png");
+            this._startSceneImage = new createjs.Bitmap(assets.getResult("startscene"));
             this.addChild(this._startSceneImage);
         
             //add GO_IN button to the MENU scene

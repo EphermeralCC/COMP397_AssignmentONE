@@ -6,10 +6,10 @@
 //Revision History: Complete
 /// <reference path = "_reference.ts" />
 // global variables
+var assets = ();
 var canvas;
 var stage;
 var stats;
-//var assets: createjs.LoadQueue();
 var currentScene;
 var scene;
 // Game Scenes
@@ -29,16 +29,50 @@ var ignorecar;
 var forest;
 var cave;
 var light;
-/*
-var assetData =[
-    {id: "StartOverButton", src:"../../Assets/images/StartOverButton.png"},
-    
-    
-]
-
-function preLoad(){}
-
-*/
+var assetData = [
+    { id: "BedroomScene", src: "../../Assets/images/BedroomScene.png" },
+    { id: "StartOverButton", src: "../../Assets/images/StartOverButton.png" },
+    { id: "ContinueWalkingButton", src: "../../Assets/images/ContinueWalkingButton.png" },
+    { id: "ExploreForestButton", src: "../../Assets/images/ExploreForestButton.png" },
+    { id: "ExploreOutsideButton", src: "../../Assets/images/ExploreOutsideButton.png" },
+    { id: "FollowRoadButton", src: "../../Assets/images/FollowRoadButton.png" },
+    { id: "forestcavescene", src: "../../Assets/images/forestcavescene.png" },
+    { id: "forestlight", src: "../../Assets/images/forestlight.png" },
+    { id: "GetInCarButton", src: "../../Assets/images/GetInCarButton.png" },
+    { id: "GoDownstairsButton", src: "../../Assets/images/GoDownstairsButton.png" },
+    { id: "GoInButton", src: "../../Assets/images/GoInButton.png" },
+    { id: "GoInCaveButton", src: "../../Assets/images/GoInCaveButton.png" },
+    { id: "GoUpstairsButton", src: "../../Assets/images/GoUpstairsButton.png" },
+    { id: "Ground", src: "../../Assets/images/Ground.png" },
+    { id: "GroundRun", src: "../../Assets/images/GroundRun.png" },
+    { id: "GroundRunScene", src: "../../Assets/images/GroundRunScene.png" },
+    { id: "ignorecar", src: "../../Assets/images/ignorecar.png" },
+    { id: "IgnoreTheCarButton", src: "../../Assets/images/IgnoreTheCarButton.png" },
+    { id: "InsideMansion", src: "../../Assets/images/InsideMansion.png" },
+    { id: "Intro", src: "../../Assets/images/Intro.png" },
+    { id: "KnifeScene", src: "../../Assets/images/KnifeScene.png" },
+    { id: "NextButton", src: "../../Assets/images/NextButton.png" },
+    { id: "outsideMansion", src: "../../Assets/images/outsideMansion.png" },
+    { id: "outsideroad", src: "../../Assets/images/outsideroad.png" },
+    { id: "RestartButton", src: "../../Assets/images/RestartButton.png" },
+    { id: "rockslide", src: "../../Assets/images/rockslide.png" },
+    { id: "startButton", src: "../../Assets/images/startButton.png" },
+    { id: "startScene", src: "../../Assets/images/startScene.png" },
+    { id: "StayGroundButton", src: "../../Assets/images/StayGroundButton.png" },
+    { id: "TakeKnife", src: "../../Assets/images/TakeKnife.png" },
+    { id: "UpstairsLeftButton", src: "../../Assets/images/UpstairsLeftButton.png" },
+    { id: "UpstairsLeftDeadScene", src: "../../Assets/images/UpstairsLeftDeadScene.png" },
+    { id: "UpstairsLeftScene", src: "../../Assets/images/UpstairsLeftScene.png" },
+    { id: "UpstairsRightButton", src: "../../Assets/images/UpstairsRightButton.png" },
+    { id: "UpstairsScene", src: "../../Assets/images/UpstairsScene.png" },
+    { id: "zombiecar", src: "../../Assets/images/zombiecar.png" }
+];
+function preLoad() {
+    assets = new createjs.LoadQueue();
+    assets.installPlugin(createjs.Sound);
+    assets.on("complete", init, this);
+    assets.loadManifest(assetData);
+}
 function init() {
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");

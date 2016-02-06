@@ -21,7 +21,7 @@ var scenes;
         //Start Method
         TakeKnifeScene.prototype.start = function () {
             //Add Image
-            this._knifeSceneImage = new createjs.Bitmap("../../Assets/images/KnifeScene.png");
+            this._knifeSceneImage = new createjs.Bitmap(assets.getResult("KnifeScene"));
             this.addChild(this._knifeSceneImage);
             //add StartOverButton button to the MENU scene
             this._startOverButton = new objects.Button("StartOverButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);

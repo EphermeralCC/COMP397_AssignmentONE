@@ -21,7 +21,7 @@ var scenes;
         //Start Method
         CaveCollapseScene.prototype.start = function () {
             //Add Image
-            this._caveCollapseSceneImage = new createjs.Bitmap("../../Assets/images/rockslide.png");
+            this._caveCollapseSceneImage = new createjs.Bitmap(assets.getResult("rockslide"));
             this.addChild(this._caveCollapseSceneImage);
             //add StartOverButton button to the MENU scene
             this._startOverButton = new objects.Button("StartOverButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 180);

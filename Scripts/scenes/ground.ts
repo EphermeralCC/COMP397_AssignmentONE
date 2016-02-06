@@ -23,7 +23,7 @@ module scenes {
         //Start Method
         public start(): void {
             //Add Image
-            this._groundSceneImage = new createjs.Bitmap("../../Assets/images/Ground.png");
+            this._groundSceneImage = new createjs.Bitmap(assets.getResult("Ground"));
             this.addChild(this._groundSceneImage);
         
             //add TakeKnife button to the MENU scene

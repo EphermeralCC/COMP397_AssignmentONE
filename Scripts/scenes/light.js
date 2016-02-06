@@ -21,7 +21,7 @@ var scenes;
         //Start Method
         ForestLightScene.prototype.start = function () {
             //Add Image
-            this._forestLightSceneImage = new createjs.Bitmap("../../Assets/images/forestlight.png");
+            this._forestLightSceneImage = new createjs.Bitmap(assets.getResult("forestlight"));
             this.addChild(this._forestLightSceneImage);
             //add StartOverButton button to the MENU scene
             this._startOverButton = new objects.Button("StartOverButton", config.Screen.CENTER_X + 200, config.Screen.CENTER_Y + 180);

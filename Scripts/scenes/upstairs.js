@@ -22,7 +22,7 @@ var scenes;
         //Start Method
         UpstairScene.prototype.start = function () {
             //Add Image
-            this._upstairsSceneImage = new createjs.Bitmap("../../Assets/images/UpstairsScene.png");
+            this._upstairsSceneImage = new createjs.Bitmap(assets.getResult("UpstairsScene"));
             this.addChild(this._upstairsSceneImage);
             //add UpstairsLeftButton button to the MENU scene
             this._leftButton = new objects.Button("UpstairsLeftButton", config.Screen.CENTER_X - 200, config.Screen.CENTER_Y);

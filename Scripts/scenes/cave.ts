@@ -21,7 +21,7 @@ module scenes {
         //Start Method
         public start(): void {
             //Add Image
-            this._caveCollapseSceneImage = new createjs.Bitmap("../../Assets/images/rockslide.png");
+            this._caveCollapseSceneImage = new createjs.Bitmap(assets.getResult("rockslide"));
             this.addChild(this._caveCollapseSceneImage);
         
             //add StartOverButton button to the MENU scene

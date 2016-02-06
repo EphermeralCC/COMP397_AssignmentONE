@@ -22,7 +22,7 @@ var scenes;
         //Start Method
         UpstairsLeftScene.prototype.start = function () {
             //Add Image
-            this._washroomSceneImage = new createjs.Bitmap("../../Assets/images/UpstairsLeftDeadScene.png");
+            this._washroomSceneImage = new createjs.Bitmap(assets.getResult("UpstairsLeftDeadScene"));
             this.addChild(this._washroomSceneImage);
             //add StartOverButton
             this._startOverScene = new objects.Button("StartOverButton", config.Screen.CENTER_X + 190, config.Screen.CENTER_Y + 180);

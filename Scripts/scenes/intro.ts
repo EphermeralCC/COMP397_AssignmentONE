@@ -22,7 +22,7 @@ module scenes {
         // Start Method
         public start(): void {
             // add Intro Image
-            this._introImage = new createjs.Bitmap("../../Assets/images/Intro.png");
+            this._introImage = new createjs.Bitmap(assets.getResult("Intro"));
             this.addChild(this._introImage);
             
             //add startButton to the Menu scene

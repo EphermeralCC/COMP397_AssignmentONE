@@ -21,7 +21,7 @@ module scenes {
         //Start Method
         public start(): void {
             //Add Image
-            this._ignoreCarImage = new createjs.Bitmap("../../Assets/images/ignorecar.png");
+            this._ignoreCarImage = new createjs.Bitmap(assets.getResult("ignorecar"));
             this.addChild(this._ignoreCarImage);
         
             //add StartOverButton button to the MENU scene

@@ -22,7 +22,7 @@ var scenes;
         //Start Method
         GroundScene.prototype.start = function () {
             //Add Image
-            this._groundSceneImage = new createjs.Bitmap("../../Assets/images/Ground.png");
+            this._groundSceneImage = new createjs.Bitmap(assets.getResult("Ground"));
             this.addChild(this._groundSceneImage);
             //add TakeKnife button to the MENU scene
             this._takeKnifeButton = new objects.Button("TakeKnife", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 180);

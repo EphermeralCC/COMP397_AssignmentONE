@@ -22,7 +22,7 @@ module scenes {
         //Start Method
         public start(): void {
             //Add Image
-            this._outsideMansionImage = new createjs.Bitmap("../../Assets/images/outsideMansion.png");
+            this._outsideMansionImage = new createjs.Bitmap(assets.getResult("outsideMansion"));
             this.addChild(this._outsideMansionImage);
         
             //add ExploreForestButton button to the MENU scene

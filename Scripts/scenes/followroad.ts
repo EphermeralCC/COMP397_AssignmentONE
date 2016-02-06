@@ -22,7 +22,7 @@ module scenes {
         //Start Method
         public start(): void {
             //Add Image
-            this._followRoadImage = new createjs.Bitmap("../../Assets/images/outsideroad.png");
+            this._followRoadImage = new createjs.Bitmap(assets.getResult("outsideroad"));
             this.addChild(this._followRoadImage);
         
             //add GetInCarButton button to the MENU scene

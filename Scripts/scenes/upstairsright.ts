@@ -22,7 +22,7 @@ module scenes {
         //Start Method
         public start(): void {
             //Add Image
-            this._bedroomSceneImage = new createjs.Bitmap("../../Assets/images/BedroomScene.png");
+            this._bedroomSceneImage = new createjs.Bitmap(assets.getResult("BedroomScene"));
             this.addChild(this._bedroomSceneImage);
         
         //add RestartButton

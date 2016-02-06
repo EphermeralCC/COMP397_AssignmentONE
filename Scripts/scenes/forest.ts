@@ -22,7 +22,7 @@ module scenes {
         //Start Method
         public start(): void {
             //Add Image
-            this._forestOutsideImage = new createjs.Bitmap("../../Assets/images/forestcavescene.png");
+            this._forestOutsideImage = new createjs.Bitmap(assets.getResult("forestcavescene"));
             this.addChild(this._forestOutsideImage);
         
             //add GoInCaveButton to the MENU scene

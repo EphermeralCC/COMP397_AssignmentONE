@@ -21,7 +21,7 @@ module scenes {
         //Start Method
         public start(): void {
             //Add Image
-            this._groundRunSceneImage = new createjs.Bitmap("../../Assets/images/GroundRunScene.png");
+            this._groundRunSceneImage = new createjs.Bitmap(assets.getResult("GroundRunScene"));
             this.addChild(this._groundRunSceneImage);
         
             //add StartOverButton button to the MENU scene

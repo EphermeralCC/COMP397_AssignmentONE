@@ -21,7 +21,7 @@ var scenes;
         //Start Method
         OutsideMansion.prototype.start = function () {
             //Add Image
-            this._outsideMansionImage = new createjs.Bitmap("../../Assets/images/outsideMansion.png");
+            this._outsideMansionImage = new createjs.Bitmap(assets.getResult("outsideMansion"));
             this.addChild(this._outsideMansionImage);
             //add ExploreForestButton button to the MENU scene
             this._forestButton = new objects.Button("ExploreForestButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 180);

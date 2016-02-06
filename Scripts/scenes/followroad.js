@@ -21,7 +21,7 @@ var scenes;
         //Start Method
         FollowRoadScene.prototype.start = function () {
             //Add Image
-            this._followRoadImage = new createjs.Bitmap("../../Assets/images/outsideroad.png");
+            this._followRoadImage = new createjs.Bitmap(assets.getResult("outsideroad"));
             this.addChild(this._followRoadImage);
             //add GetInCarButton button to the MENU scene
             this._getInCarButton = new objects.Button("GetInCarButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 180);

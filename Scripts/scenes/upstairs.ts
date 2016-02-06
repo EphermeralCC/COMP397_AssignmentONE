@@ -23,7 +23,7 @@ module scenes {
         //Start Method
         public start(): void {
             //Add Image
-            this._upstairsSceneImage = new createjs.Bitmap("../../Assets/images/UpstairsScene.png");
+            this._upstairsSceneImage = new createjs.Bitmap(assets.getResult("UpstairsScene"));
             this.addChild(this._upstairsSceneImage);
         
             //add UpstairsLeftButton button to the MENU scene
