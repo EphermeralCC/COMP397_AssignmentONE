@@ -6,7 +6,7 @@
 //Revision History: Complete
 /// <reference path = "_reference.ts" />
 // global variables
-var assets = ();
+var assets;
 var canvas;
 var stage;
 var stats;

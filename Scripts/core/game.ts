@@ -8,7 +8,7 @@
 /// <reference path = "_reference.ts" />
 
 // global variables
-var assets: createjs.LoadQueue();
+var assets: createjs.LoadQueue;
 var canvas: HTMLElement;
 var stage: createjs.Stage;
 var stats: Stats;
