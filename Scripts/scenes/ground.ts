@@ -1,3 +1,10 @@
+//The Source file name: ground.ts 
+//Author’s name: Christine Cho
+//Last Modified by: Christine Cho
+//Date last Modified: 02/05/2016
+//Program description: The scene for the GroundScene 
+//Revision History: Complete
+
 //START SCENE
 module scenes {
     export class GroundScene extends objects.Scene {
@@ -45,15 +52,16 @@ module scenes {
         
         //EVENT HANDLERS -------------------------------
         
-        //Continue click event handler
+        //TakeKnife button click event handler
         private _takeKnifeButtonClick(event: createjs.MouseEvent) {
-            //Switch to GO_IN scene
+            //Switch to KNIFE_SCENE scene
             scene = config.Scene.KNIFE_SCENE;
             changeScene();
         }
-
+        
+        //GroundRun button click event handler
         private _groundRunButtonClick(event: createjs.MouseEvent) {
-            //Switch to GO_IN scene
+            //Switch to GROUND_RUN scene
             scene = config.Scene.GROUND_RUN;
             changeScene();
         }

@@ -1,3 +1,10 @@
+//The Source file name: upstairs.ts 
+//Author’s name: Christine Cho
+//Last Modified by: Christine Cho
+//Date last Modified: 02/05/2016
+//Program description: The scene for the UpstairScene 
+//Revision History: Complete
+
 //START SCENE
 module scenes {
     export class UpstairScene extends objects.Scene {
@@ -19,7 +26,7 @@ module scenes {
             this._upstairsSceneImage = new createjs.Bitmap("../../Assets/images/UpstairsScene.png");
             this.addChild(this._upstairsSceneImage);
         
-            //add TakeKnife button to the MENU scene
+            //add UpstairsLeftButton button to the MENU scene
             this._leftButton = new objects.Button("UpstairsLeftButton",
                 config.Screen.CENTER_X - 200,
                 config.Screen.CENTER_Y);
@@ -27,7 +34,7 @@ module scenes {
 
             this._leftButton.on("click", this._leftButtonButtonClick, this);
             
-            //add GroundRun button to the MENU scene
+            //add UpstairsRightButton button to the MENU scene
             this._rightButton = new objects.Button("UpstairsRightButton",
                 config.Screen.CENTER_X + 180,
                 config.Screen.CENTER_Y);
@@ -45,15 +52,16 @@ module scenes {
         
         //EVENT HANDLERS -------------------------------
         
-        //Continue click event handler
+        //UpstairsLeftButton click event handler
         private _leftButtonButtonClick(event: createjs.MouseEvent) {
-            //Switch to GO_IN scene
+            //Switch to UPSTAIRS_LEFT scene
             scene = config.Scene.UPSTAIRS_LEFT;
             changeScene();
         }
-
+        
+        //UpstairsRightButton click event handler
         private _rightButtonButtonClick(event: createjs.MouseEvent) {
-            //Switch to GO_IN scene
+            //Switch to UPSTAIRS_RIGHT scene
             scene = config.Scene.UPSTAIRS_RIGHT;
             changeScene();
         }

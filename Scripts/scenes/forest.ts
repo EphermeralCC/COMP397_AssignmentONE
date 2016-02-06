@@ -1,3 +1,10 @@
+//The Source file name: forest.ts 
+//Author’s name: Christine Cho
+//Last Modified by: Christine Cho
+//Date last Modified: 02/05/2016
+//Program description: The scene for the ForestOutside 
+//Revision History: Complete
+
 module scenes {
     export class ForestOutside extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES --------------------------------
@@ -18,7 +25,7 @@ module scenes {
             this._forestOutsideImage = new createjs.Bitmap("../../Assets/images/forestcavescene.png");
             this.addChild(this._forestOutsideImage);
         
-            //add upstairs button to the MENU scene
+            //add GoInCaveButton to the MENU scene
             this._goInCaveButton = new objects.Button("GoInCaveButton",
                 config.Screen.CENTER_X - 100,
                 config.Screen.CENTER_Y + 180);
@@ -27,7 +34,7 @@ module scenes {
             this._goInCaveButton.on("click", this._goInCaveButtonClick, this);
 
             
-            //add ground button
+            //add ContinueWalkingButton button
             this._continueWalkingButton = new objects.Button("ContinueWalkingButton",
                 config.Screen.CENTER_X + 100,
                 config.Screen.CENTER_Y + 180);
@@ -45,16 +52,16 @@ module scenes {
         
         //EVENT HANDLERS -------------------------------
         
-        //GoUpstairsButton click event handler
+        //GoInCaveButton click event handler
         private _goInCaveButtonClick(event: createjs.MouseEvent) {
             //Switch to GO_IN scene
             scene = config.Scene.CAVE;
             changeScene();
         }
         
-        //GoDownstairsButton click event handler
+        //ContinueWalkingButton click event handler
         private _continueWalkingButtonClick(event: createjs.MouseEvent){
-            //Switch to Explore scene
+            //Switch to LIGHT scene
             scene = config.Scene.LIGHT;
             changeScene();
         }

@@ -1,3 +1,10 @@
+//The Source file name: outside.ts 
+//Author’s name: Christine Cho
+//Last Modified by: Christine Cho
+//Date last Modified: 02/05/2016
+//Program description: The scene for the OutsideMansion 
+//Revision History: Complete
+
 module scenes {
     export class OutsideMansion extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES --------------------------------
@@ -18,7 +25,7 @@ module scenes {
             this._outsideMansionImage = new createjs.Bitmap("../../Assets/images/outsideMansion.png");
             this.addChild(this._outsideMansionImage);
         
-            //add upstairs button to the MENU scene
+            //add ExploreForestButton button to the MENU scene
             this._forestButton = new objects.Button("ExploreForestButton",
                 config.Screen.CENTER_X - 100,
                 config.Screen.CENTER_Y + 180);
@@ -27,7 +34,7 @@ module scenes {
             this._forestButton.on("click", this._forestButtonButtonClick, this);
             
             
-            //add ground button
+            //add FollowRoadButton button
             this._roadButton = new objects.Button("FollowRoadButton",
                 config.Screen.CENTER_X + 100,
                 config.Screen.CENTER_Y + 180);
@@ -45,16 +52,16 @@ module scenes {
         
         //EVENT HANDLERS -------------------------------
         
-        //GoUpstairsButton click event handler
+        //ExploreForestButton click event handler
         private _forestButtonButtonClick(event: createjs.MouseEvent) {
-            //Switch to GO_IN scene
+            //Switch to FOREST scene
             scene = config.Scene.FOREST;
             changeScene();
         }
         
-        //GoDownstairsButton click event handler
+        //FollowRoadButton click event handler
         private _roadButtonClick(event: createjs.MouseEvent){
-            //Switch to Explore scene
+            //Switch to FOLLOW_ROAD scene
             scene = config.Scene.FOLLOW_ROAD;
             changeScene();
         }

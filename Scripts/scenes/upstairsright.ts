@@ -1,3 +1,10 @@
+//The Source file name: upstairsright.ts 
+//Author’s name: Christine Cho
+//Last Modified by: Christine Cho
+//Date last Modified: 02/05/2016
+//Program description: The scene for the UpstairsRightScene 
+//Revision History: Complete
+
 //START SCENE
 module scenes {
     export class UpstairsRightScene extends objects.Scene {
@@ -18,14 +25,14 @@ module scenes {
             this._bedroomSceneImage = new createjs.Bitmap("../../Assets/images/BedroomScene.png");
             this.addChild(this._bedroomSceneImage);
         
-        //add startoverbutton
+        //add RestartButton
            this._restartButton = new objects.Button(
                 "RestartButton",
                 config.Screen.CENTER_X,
                 config.Screen.CENTER_Y + 180);
             this.addChild(this._restartButton);
            
-            // START_OVER Button event listener
+            // RestartButton Button event listener
             this._restartButton.on("click", this._restartButtonButtonClick, this);
             
             stage.addChild(this);
@@ -38,9 +45,9 @@ module scenes {
         
         //EVENT HANDLERS -------------------------------
         
-        //Continue click event handler
+        //RestartButton click event handler
         private _restartButtonButtonClick(event: createjs.MouseEvent) {
-            //Switch to GO_IN scene
+            //Switch to INTRO scene
             scene = config.Scene.INTRO;
             changeScene();
         }

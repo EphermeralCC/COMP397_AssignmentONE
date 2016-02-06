@@ -1,3 +1,10 @@
+//The Source file name: startscene.ts 
+//Author’s name: Christine Cho
+//Last Modified by: Christine Cho
+//Date last Modified: 02/05/2016
+//Program description: The scene for the StartScene 
+//Revision History: Complete
+
 //START SCENE
 module scenes {
     export class StartScene extends objects.Scene {

@@ -1,3 +1,10 @@
+//The Source file name: takeknife.ts 
+//Author’s name: Christine Cho
+//Last Modified by: Christine Cho
+//Date last Modified: 02/05/2016
+//Program description: The scene for the TakeKnifeScene 
+//Revision History: Complete
+
 module scenes {
     export class TakeKnifeScene extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES --------------------------------
@@ -17,7 +24,7 @@ module scenes {
             this._knifeSceneImage = new createjs.Bitmap("../../Assets/images/KnifeScene.png");
             this.addChild(this._knifeSceneImage);
         
-            //add upstairs button to the MENU scene
+            //add StartOverButton button to the MENU scene
            this._startOverButton = new objects.Button(
                 "StartOverButton",
                 config.Screen.CENTER_X,
@@ -39,7 +46,7 @@ module scenes {
         
         //StartOverButton click event handler
         private _startOverButtonClick(event: createjs.MouseEvent) {
-            //Switch to GO_IN scene
+            //Switch to INTRO scene
             scene = config.Scene.INTRO;
             changeScene();
         }

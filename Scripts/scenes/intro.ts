@@ -1,4 +1,11 @@
-﻿// INTRO SCENE
+﻿//The Source file name: intro.ts 
+//Author’s name: Christine Cho
+//Last Modified by: Christine Cho
+//Date last Modified: 02/05/2016
+//Program description: The scene for the INTRO 
+//Revision History: Complete
+
+// INTRO SCENE
 module scenes {
     export class Intro extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
@@ -40,7 +47,7 @@ module scenes {
         
         //StartButton click event handler
         private _startButtonClick(event: createjs.MouseEvent){
-            //Switch to StartScene
+            //Switch to START_SCENE
             scene = config.Scene.START_SCENE;
             changeScene();
         }

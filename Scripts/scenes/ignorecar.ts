@@ -1,3 +1,10 @@
+//The Source file name: ignorecar.ts 
+//Author’s name: Christine Cho
+//Last Modified by: Christine Cho
+//Date last Modified: 02/05/2016
+//Program description: The scene for the IgnoreCarScene 
+//Revision History: Complete
+
 module scenes {
     export class IgnoreCarScene extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES --------------------------------
@@ -17,14 +24,14 @@ module scenes {
             this._ignoreCarImage = new createjs.Bitmap("../../Assets/images/ignorecar.png");
             this.addChild(this._ignoreCarImage);
         
-            //add upstairs button to the MENU scene
+            //add StartOverButton button to the MENU scene
            this._startOverButton = new objects.Button(
                 "StartOverButton",
                 config.Screen.CENTER_X,
                 config.Screen.CENTER_Y + 180);
             this.addChild(this._startOverButton);
            
-            // START_OVER Button event listener
+            // StartOverButton Button event listener
             this._startOverButton.on("click", this._startOverButtonClick, this);
             
             stage.addChild(this);
@@ -39,7 +46,7 @@ module scenes {
         
         //StartOverButton click event handler
         private _startOverButtonClick(event: createjs.MouseEvent) {
-            //Switch to GO_IN scene
+            //Switch to INTRO scene
             scene = config.Scene.INTRO;
             changeScene();
         }

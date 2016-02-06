@@ -1,3 +1,10 @@
+//The Source file name: insidemansion.ts 
+//Author’s name: Christine Cho
+//Last Modified by: Christine Cho
+//Date last Modified: 02/05/2016
+//Program description: The scene for the InsideMansion 
+//Revision History: Complete
+
 module scenes {
     export class InsideMansion extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES --------------------------------
@@ -18,7 +25,7 @@ module scenes {
             this._insideMansionImage = new createjs.Bitmap("../../Assets/images/insidemansion.png");
             this.addChild(this._insideMansionImage);
         
-            //add upstairs button to the MENU scene
+            //add GoDownstairsButton button to the MENU scene
             this._upstairsButton = new objects.Button("GoUpstairsButton",
                 config.Screen.CENTER_X - 100,
                 config.Screen.CENTER_Y + 180);
@@ -27,7 +34,7 @@ module scenes {
             this._upstairsButton.on("click", this._upstairsButtonClick, this);
 
             
-            //add ground button
+            //add StayGroundButton button to the MENU scene
             this._groundButton = new objects.Button("StayGroundButton",
                 config.Screen.CENTER_X + 100,
                 config.Screen.CENTER_Y + 180);
@@ -47,14 +54,14 @@ module scenes {
         
         //GoUpstairsButton click event handler
         private _upstairsButtonClick(event: createjs.MouseEvent) {
-            //Switch to GO_IN scene
+            //Switch to UPSTAIRS_SCENE scene
             scene = config.Scene.UPSTAIRS_SCENE;
             changeScene();
         }
         
         //GoDownstairsButton click event handler
         private _groundButtonClick(event: createjs.MouseEvent){
-            //Switch to Explore scene
+            //Switch to STAY_GROUND scene
             scene = config.Scene.STAY_GROUND;
             changeScene();
         }

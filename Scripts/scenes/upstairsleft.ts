@@ -1,3 +1,10 @@
+//The Source file name: upstairsleft.ts 
+//Author’s name: Christine Cho
+//Last Modified by: Christine Cho
+//Date last Modified: 02/05/2016
+//Program description: The scene for the UpstairsLeftScene 
+//Revision History: Complete
+
 //START SCENE
 module scenes {
     export class UpstairsLeftScene extends objects.Scene {
@@ -18,14 +25,14 @@ module scenes {
             this._washroomSceneImage = new createjs.Bitmap("../../Assets/images/UpstairsLeftDeadScene.png");
             this.addChild(this._washroomSceneImage);
         
-        //add startoverbutton
+        //add StartOverButton
            this._startOverScene = new objects.Button(
                 "StartOverButton",
                 config.Screen.CENTER_X + 190,
                 config.Screen.CENTER_Y + 180);
             this.addChild(this._startOverScene);
            
-            // START_OVER Button event listener
+            // StartOverButton Button event listener
             this._startOverScene.on("click", this._startOverSceneButtonClick, this);
             
             stage.addChild(this);
@@ -38,9 +45,9 @@ module scenes {
         
         //EVENT HANDLERS -------------------------------
         
-        //Continue click event handler
+        //StartOverButton click event handler
         private _startOverSceneButtonClick(event: createjs.MouseEvent) {
-            //Switch to GO_IN scene
+            //Switch to INTRO scene
             scene = config.Scene.INTRO;
             changeScene();
         }
